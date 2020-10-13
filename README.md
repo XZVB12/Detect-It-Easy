@@ -4,6 +4,9 @@
 
 Detect It Easy
 ==============
+
+**For windows users: If you have Antivirus issues please use the version: https://github.com/horsicq/DIE-engine/releases/download/3.00/die_win32_portable_noloader_3.00.zip**
+
 ![alt text](https://github.com/horsicq/Detect-It-Easy/blob/master/mascots/3.00.jpg "Version")
 ![alt text](https://github.com/horsicq/Detect-It-Easy/blob/master/screenshot.jpg "Screenshot")
 
@@ -57,9 +60,9 @@ Install Qt 5.12.8: https://github.com/horsicq/build_tools
 
 Clone project: git clone --recursive https://github.com/horsicq/DIE-engine.git
 
-Edit build_lin64.bat ( check QT_PATH variable)
+Edit build_lin64.sh ( check QT_PATH variable)
 
-Run build_lin64.bat
+Run build_lin64.sh
 
 How to build on OSX
 =======
@@ -68,9 +71,9 @@ Install Qt 5.12.8: https://github.com/horsicq/build_tools
 
 Clone project: git clone --recursive https://github.com/horsicq/DIE-engine.git
 
-Edit build_mac.bat ( check QT_PATH variable)
+Edit build_mac.sh ( check QT_PATH variable)
 
-Run build_mac.bat
+Run build_mac.sh
 
 How to build on Windows(XP)
 =======
