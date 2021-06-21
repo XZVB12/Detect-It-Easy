@@ -6,7 +6,7 @@
 Detect It Easy
 ==============
 
-![alt text](https://github.com/horsicq/Detect-It-Easy/blob/master/mascots/3.01.png "Version")
+![alt text](https://github.com/horsicq/Detect-It-Easy/blob/master/mascots/3.02.png "Version")
 
 ![alt text](https://github.com/horsicq/Detect-It-Easy/blob/master/screenshot.jpg "Screenshot")
 
@@ -78,17 +78,47 @@ type: GUI
   linker: Turbo Linker(2.25*,Delphi)[GUI32]
 ```
 
-
-How to build on Linux
+Packages: 
 =======
 
-Install Qt 5.15.2: https://github.com/horsicq/build_tools
+- Chocolatey(Windows): https://community.chocolatey.org/packages/die (Thanks **chtof**(https://github.com/chtof) and **Rob Reynolds**(https://github.com/ferventcoder))
+- Parrot OS: Package name **detect-it-easy** (Thanks **Nong Hoang Tu**(https://github.com/dmknght))
+- Arch Linux: https://aur.archlinux.org/packages/detect-it-easy-git/ (Thanks **Arnaud Dovi**(https://github.com/class101))
+- REMnux https://remnux.org/ (Thanks **REMnux team**(https://twitter.com/REMnux/status/1401935989266919426))
+
+How to build on Linux(Debian package)
+=======
+
+Install packages:
+
+- sudo apt-get install qtbase5-dev -y
+- sudo apt-get install qtscript5-dev -y
+- sudo apt-get install qttools5-dev-tools -y
+- sudo apt-get install git -y
+- sudo apt-get install build-essential -y
+- sudo apt-get install qt5-default -y
+
+git clone --recursive https://github.com/horsicq/DIE-engine.git
+
+cd DIE-engine
+
+Run build script: bash -x build_dpkg.sh
+
+Install deb package: sudo dpkg -i release/die_[Version].deb
+
+Run DiE: *die [FileName] or diec [FileName]*
+
+How to build on Linux(Automake)
+=======
 
 Clone project: git clone --recursive https://github.com/horsicq/DIE-engine.git
 
-Edit build_lin64.sh ( check QT_PATH variable)
+- chmod a+x configure
+- ./configure
+- make
+- make install
 
-Run build_lin64.sh
+Run DiE: *die [FileName] or diec [FileName]*
 
 How to build on OSX
 =======
@@ -97,9 +127,9 @@ Install Qt 5.15.2: https://github.com/horsicq/build_tools
 
 Clone project: git clone --recursive https://github.com/horsicq/DIE-engine.git
 
-Edit build_mac.sh ( check QT_PATH variable)
+Edit build_mac.sh ( check QMAKE_PATH variable)
 
-Run build_mac.sh
+Run build script: bash -x build_mac.sh
 
 How to build on Windows(XP)
 =======
@@ -112,7 +142,7 @@ Install 7-Zip: https://github.com/horsicq/build_tools
 
 Clone project: git clone --recursive https://github.com/horsicq/DIE-engine.git
 
-Edit build_winxp.bat ( check VS_PATH,  SEVENZIP_PATH, QT_PATH variables)
+Edit build_winxp.bat ( check VSVARS_PATH,  SEVENZIP_PATH, QMAKE_PATH variables)
 
 Run build_winxp.bat
 
@@ -127,9 +157,9 @@ Install 7-Zip: https://github.com/horsicq/build_tools
 
 Clone project: git clone --recursive https://github.com/horsicq/DIE-engine.git
 
-Edit build_win32.bat ( check VS_PATH,  SEVENZIP_PATH, QT_PATH variables)
+Edit build_win32.bat ( check VSVARS_PATH,  SEVENZIP_PATH, QMAKE_PATH variables)
 
-Edit build_win64.bat ( check VS_PATH,  SEVENZIP_PATH, QT_PATH variables)
+Edit build_win64.bat ( check VSVARS_PATH,  SEVENZIP_PATH, QMAKE_PATH variables)
 
 Run build_win32.bat
 
